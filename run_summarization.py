@@ -419,6 +419,8 @@ def main():
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
         use_auth_token=True if model_args.use_auth_token else None,
+        padding=True,  # Add padding
+        truncation=True  
     )
 
     # chenhui: allow source length > 1024
